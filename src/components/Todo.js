@@ -21,6 +21,7 @@ export const Todo = ({ todo, deleteTodo, editTodo, checkTodo }) => {
       justify="space-between"
       onMouseOver={() => setShowButtons(true)}
       onMouseLeave={() => setShowButtons(false)}
+      position="relative"
     >
       <Checkbox isChecked={todo.checked} onChange={(e) => checkTodo(e.target.checked)} size="lg" />
       <Text
@@ -30,7 +31,7 @@ export const Todo = ({ todo, deleteTodo, editTodo, checkTodo }) => {
       >
         {todo.message}
       </Text>
-      <ButtonGroup>
+      <ButtonGroup position="absolute" left="100%">
         <Button
           opacity={Number(showButtons)}
           onClick={onOpen}
