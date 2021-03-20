@@ -3,7 +3,7 @@ import { VStack } from '@chakra-ui/react';
 import { Todo } from './Todo';
 export const TodoList = ({ todos, deleteTodo, editTodo, checkTodo }) => (
   <>
-    <VStack spacing="20px">
+    <VStack mb={10} spacing="20px">
       {React.Children.toArray(
         todos.map(todo => (
           <Todo

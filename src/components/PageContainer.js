@@ -1,6 +1,7 @@
 import React from 'react'
 import Head from 'next/head';
 import { Container, Text } from "@chakra-ui/react"
+
 export const PageContainer = ({ pageTitle, children }) => {
   return (
     <>

@@ -1,4 +1,6 @@
 import React, { useReducer } from 'react'
+import { Auth } from 'aws-amplify';
+import { withAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react'
 import { PageContainer } from '../components/PageContainer'
 import { TodoForm } from '../components/TodoForm';
 import { TodoList } from '../components/TodoList';
@@ -14,8 +16,9 @@ const Todo = () => {
         todos={todos}
         {...restOfTodoActions}
       />
+      <AmplifySignOut>Sign out</AmplifySignOut>
     </PageContainer>
   )
 }
 
-export default Todo
+export default withAuthenticator(Todo);

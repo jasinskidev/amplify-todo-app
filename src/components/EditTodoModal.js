@@ -23,7 +23,10 @@ export const EditTodoModal = ({ isOpen, onClose, onSubmit, currentTodoMessage })
 
   return (
     <>
-      <Modal isOpen={isOpen} onClose={onClose}>
+      <Modal
+        isOpen={isOpen}
+        onClose={onClose}
+      >
         <ModalOverlay />
         <ModalContent>
           <ModalHeader>Edit todo</ModalHeader>
